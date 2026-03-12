@@ -6,7 +6,6 @@ const myWorks = [
     link:"https://indexcode70.github.io/omikuji-app/"
     },
 
-    
     {
     title: "天気予報アプリ",
     description: "天気と気温を表示します。APIキーを取得し、条件分岐で背景の色が変わるようにしました。",
