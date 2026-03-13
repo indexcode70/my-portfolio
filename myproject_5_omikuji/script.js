@@ -74,10 +74,13 @@ function createSakuraStorm() {
         const size = (Math.random() * 10 + 10) + 'px';
         petal.style.width = size;
         petal.style.height = size;
-        // 落ちる速度をランダムに(4~8秒)
+
+        // 落ちる速度をランダムに(4~8秒かけて落ちる)
         petal.style.animationDuration = (Math.random() * 4 + 4) + 's';
+
         // 振り始めるタイミングをバラバラにする
         petal.style.animationDelay = (Math.random() * 2) + 's';
+
         // 遠近感を出す
         petal.style.opacity = Math.random() * 0.7 + 0.3;  // 0.3(薄い)~1.0(濃い)の間でランダムに
 
@@ -89,5 +92,6 @@ function createSakuraStorm() {
         }, 10000);
          
         }, i * 20);  // 20ミリ秒(0.02秒)ずつずらして発生させる合計(150枚×0.02秒=)3秒間かけて全ての花びらを生成する
+                     // ずらすことで150枚の花びらを生成する際の負荷を抑える
     }
 }
