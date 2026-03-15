@@ -16,7 +16,7 @@ const thunderContainer = document.getElementById('thunder-container');
 
 async function getWeather(city) {
 
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(city)}&appid=${apikey}&units=metric&lang=ja`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apikey}&units=metric&lang=ja`;
     try {
         const response = await fetch(url);
 
