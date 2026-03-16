@@ -26,7 +26,7 @@ body.night-mode {
     text-align: center;
     color: white;
     width: 90%;
-    max-width: 400px;  /* スマホで見た時に幅を最大で400pxでも画面が小さければ90%にする */
+    max-width: 400px;  /* スマホで見た時に幅を最大で400pxにする。でも画面が小さければ90%にする */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
