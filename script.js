@@ -7,8 +7,8 @@ const myWorks = [
     },
 
     {
-    title: "天気予報アプリ",
-    description: "天気と気温を表示します。APIキーを取得し、条件分岐で背景の色が変わるようにしました。",
+    title: "お天気実況",
+    description: "検索した場所の現在の天気と気温を表示します。APIキーを取得し、条件分岐で背景の色が変わるようにしました。",
     tech: "HTMl / CSS / javaScript",
     link: "https://indexcode70.github.io/weather-app/"
     },
