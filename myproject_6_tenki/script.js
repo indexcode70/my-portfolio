@@ -13,20 +13,25 @@ const sunContainer = document.getElementById('sun-container');
 const cloudContainer = document.getElementById('cloud-container');
 const thunderContainer = document.getElementById('thunder-container');
 
-
-async function getWeather(city) {
+// async: 「この関数の中では非同期処理が発生する」という宣言
+async function getWeather(city) { 
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apikey}&units=metric&lang=ja`;
     try {
-        const response = await fetch(url);
 
+        // 1.await(待ってて):  Fetchがお使いから帰るまで、ここで一旦「一時停止」
+        const response = await fetch(url);
+        
+        // 2.お使いが成功したか確認
         if (!response.ok) {
             descElt.innerText = "都市名が見つかりませんでした (404)";
             return;
         }
 
+        // 3.await(また待ってて): 届いたデータをJavaScriptで使える形(JSON)に変換するのも時間がかかるので待つ。
         const data = await response.json();
 
+        // 4.ここから先は、データが届いた後の処理
         locationElt.innerText = data.name;
         tempElt.innerText = `${Math.round(data.main.temp)} ℃`;
         
