@@ -87,7 +87,7 @@ function saveList() {
         });
     });
     
-    // 保存箱(LocalStorage)に「list」という名前で保存
+    // 保存箱(LocalStorage)に「shoppingList」という名前で保存
     localStorage.setItem('shoppingList', JSON.stringify(items));
 }
 
