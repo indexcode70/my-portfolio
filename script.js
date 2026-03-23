@@ -1,21 +1,21 @@
 const myWorks = [
     {
     title: "おみくじ",
-    description: "クリックするとおみくじが引けます。javaScriptの数的オブジェクトと配列インデックスを学びました。",
+    description: "ボタン操作で運勢をランダムに表示するアプリです。javaScriptのMathオブジェクトと配列インデックスの操作を組み合わせたロジックを実装し、基本的な動的コンテンツの生成を学びました。",
     tech: "HTMl / CSS / javaScript",
     link:"https://indexcode70.github.io/omikuji-app/"
     },
 
     {
     title: "お天気実況",
-    description: "検索した場所の現在の天気と気温を表示します。APIキーを取得し、条件分岐で背景の色が変わるようにしました。",
+    description: "OpenWeatherMap APIを利用し、指定した都市の天候と気温をリアルタイムに取得し表示します。Fetch APIによる非同期処理に加え、天候データに応じて動的生成したCSSアニメーションによる演出など、視覚的な楽しさにこだわりました。",
     tech: "HTMl / CSS / javaScript",
     link: "https://indexcode70.github.io/weather-app/"
     },
 
     {
     title: "お買い物リスト",
-    description: "今日買うものを分かりやすく確認できます。LocalStorageを使用して入力した文字を保存できるように工夫しました。",
+    description: "日々の買い物を管理できるタスク管理アプリです、Web Storage API(LocalStorage)を活用し、ブラウザを閉じてもデータが保持される永続化を実現しました。CSSのcalc関数を用いたレスポンシブなレイアウト設計にも挑戦しています。",
     tech: "HTML / CSS / javaScript",
     link: "https://indexcode70.github.io/shopping-memo_app/"   
     },
