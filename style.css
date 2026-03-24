@@ -50,7 +50,9 @@ main {
 
 /* 作品カード */
 .work-card {
+    position: relative; /* 基準点にする */
     padding: 30px;
+    padding-bottom: 70px; /* ボタンのスペースを確保 */
     border: 1px solid #eee;
     border-radius: 4px;  /* あえて少しだけ丸める */
     transition: all 0.3s ease;
@@ -97,6 +99,10 @@ footer {
     border-radius: 4px;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    position: absolute; /* 絶対位置 */
+    right: 30px;
+    bottom: 30px;
+    display: inline-block;
 }
 
 .view-button:hover {
@@ -104,3 +110,43 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     background-color: #555;
     }
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 25px 10px;
+    }
+    
+    main {
+        padding: 0px;
+        margin: 20px 0px;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.6rem;
+    }
+
+    main p {
+        font-size: 0.7rem;
+    }
+
+    .work-card {
+        padding: 15px;
+        padding-bottom: 60px;
+    }
+
+    .view-button {
+        right: 15px !important;
+        bottom: 15px !important;
+    }
+
+    section {
+        padding: 0px 5px;
+    }
+
+}
