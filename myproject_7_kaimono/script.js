@@ -31,6 +31,7 @@ const addBtn = document.getElementById('addBtn');
 const itemInput = document.getElementById('itemInput');
 const shoppingList = document.getElementById('shoppingList');    // 親を捕まえる  
 const clearBtn = document.getElementById('clearBtn');
+const deleteDoneBtn = document.getElementById('deleteDoneBtn');
 
 addBtn.addEventListener('click', () => {
     const text = itemInput.value;   // 入力された文字
@@ -72,6 +73,28 @@ clearBtn.addEventListener('click', () => {
     if (confirm('本当に全て消していいですか？')) {  // 確認ダイアログを出す
         shoppingList.innerHTML = "";  // 親の中身を空にする
     }
+});
+
+// 完了したものを消す処理 
+deleteDoneBtn.addEventListener('click', () => {
+    // 全ての付箋をループで確認する
+    const items = document.querySelectorAll('.item');
+    let removed = false;
+
+    items.forEach(li => {
+        // もしis-doneクラス(完了状態)がついていたら
+        if (li.classList.contains('is-done')) {
+            li.remove();   // 画面から消す
+            removed = true;
+        }
+    });
+
+    if (removed) {
+        saveList();   // 消した後の状態を確認する
+    } else {
+        alert("完了(クリック)されたアイテムがありません");
+    }
+
 });
 
 // リストの状態を保存する関数
